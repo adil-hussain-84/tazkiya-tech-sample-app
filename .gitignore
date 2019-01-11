@@ -1,0 +1,12 @@
+# General folders
+/.idea
+/.gradle
+/captures
+
+# General files
+local.properties
+*.iml
+
+# Build folders
+/build
+/app/build
