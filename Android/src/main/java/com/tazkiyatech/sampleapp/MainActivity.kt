@@ -17,18 +17,12 @@ class MainActivity : AppCompatActivity() {
 
     @Suppress("UNUSED_PARAMETER")
     fun onOpenHifdhRevisionTrackerAppButtonClicked(view: View) {
-        launchApplication(
-            "com.tazkiyatech.hifdhtracker",
-            "Hifdh Revision Tracker"
-        )
+        launchApplication("com.tazkiyatech.hifdhtracker", "Hifdh Revision Tracker")
     }
 
     @Suppress("UNUSED_PARAMETER")
     fun onOpenHifdhRevisionTesterAppButtonClicked(view: View) {
-        launchApplication(
-            "com.tazkiyatech.hifdhtester",
-            "Hifdh Revision Tester"
-        )
+        launchApplication("com.tazkiyatech.hifdhtester", "Hifdh Revision Tester")
     }
 
     private fun launchApplication(applicationId: String,
@@ -55,27 +49,21 @@ class MainActivity : AppCompatActivity() {
         try {
             val intent = Intent(Intent.ACTION_VIEW)
 
-            intent.data = Uri.parse(
-                "market://details?id=$applicationId"
-            )
+            intent.data = Uri.parse("market://details?id=$applicationId")
 
             startActivity(intent)
         } catch (e: ActivityNotFoundException) {
             val intent = Intent(Intent.ACTION_VIEW)
 
-            intent.data = Uri.parse(
-                "https://play.google.com/store/apps/details?id=$applicationId"
-            )
+            intent.data = Uri.parse("https://play.google.com/store/apps/details?id=$applicationId")
 
             startActivity(intent)
         }
     }
 
     private fun showAppNotInstalledToast(applicationName: String) {
-        Toast.makeText(
-            this,
-            getString(R.string.app_not_installed_toast_format, applicationName),
-            Toast.LENGTH_LONG
-        ).show()
+        val message = getString(R.string.app_not_installed_toast_format, applicationName)
+
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 }
