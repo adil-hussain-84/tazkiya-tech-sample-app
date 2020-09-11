@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    @Suppress("UNUSED_PARAMETER")
     fun onOpenHifdhRevisionTrackerAppButtonClicked(view: View) {
         launchApplication(
             "com.tazkiyatech.hifdhtracker",
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    @Suppress("UNUSED_PARAMETER")
     fun onOpenHifdhRevisionTesterAppButtonClicked(view: View) {
         launchApplication(
             "com.tazkiyatech.hifdhtester",
@@ -29,10 +31,9 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    private fun launchApplication(
-        applicationId: String,
-        applicationName: String
-    ) {
+    private fun launchApplication(applicationId: String,
+                                  applicationName: String) {
+
         try {
             val intent = packageManager.getLaunchIntentForPackage(applicationId)
 
@@ -46,10 +47,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun showInstallScreenForApplication(
-        applicationId: String,
-        applicationName: String
-    ) {
+    private fun showInstallScreenForApplication(applicationId: String,
+                                                applicationName: String) {
+
         showAppNotInstalledToast(applicationName)
 
         try {
