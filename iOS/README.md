@@ -12,8 +12,8 @@ The first step is to add an `LSApplicationQueriesSchemes` key in your applicatio
 ```
 
 The second step is to define the logic which will open the [Hifdh Revision Tracker](https://apps.apple.com/app/id1524002702) application if it exists on the device, or otherwise open its landing page in the App Store app.
-See the [ViewController.swift](SampleApp/ViewController.swift) class for the code.
+See the `launchApplication(urlScheme:appStoreId:)` method in the [ViewController.swift](SampleApp/ViewController.swift) class for the code.
 
-The video below demonstrates the behaviour when the [Hifdh Revision Tracker](https://apps.apple.com/app/id1524002702) application exists on the device:
+The video below demonstrates the behaviour when the [Hifdh Revision Tracker](https://apps.apple.com/app/id1524002702) application exists on the device.
 
 ![Sample App](https://media.giphy.com/media/eT2gZi0Er9aP5rngKS/giphy.gif)
