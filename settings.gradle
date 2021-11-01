@@ -1,1 +1,3 @@
+rootProject.name = "tazkiya-tech-sample-app"
+
 include ':Android'
